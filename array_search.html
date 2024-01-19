@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!-- <script>
+        let data = [10,20,30,40,50,60,70,80,90];
+        let item = 90;
+        index=undefined
+        for (let i=0;i<=data.length-1;i++){
+            if(data[i]===item){
+                index=i
+                break
+            }
+        }
+        console.log(index)
+
+        // direct way or inbuilt method to search element
+        // console.log(data.indexOf(item));
+    </script> -->
+
+
+<!-- Dynamic method -->
+<script>
+        let data = [10,20,30,40,50,60,70,80,90];
+        function searchElment(){
+            var item = document.getElementById('searchEl').value
+            index=undefined
+            for (let i=0;i<=data.length-1;i++){
+            if(data[i]===parseInt(item)){
+                index=i
+                break
+            }
+        }
+        console.log(index)
+        }
+
+// Inbuilt Method
+// console.log(data.indexOf(10));
+</script>
+
+
+<body>
+    
+    <input type="text" placeholder="enter value" id="searchEl">
+    <button onclick="searchElment()">search element</button>
+
+</body>
+</html>

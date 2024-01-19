@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete element in array</title>
+</head>
+
+    <!-- <script>
+        let data = [30,40,50,20,90,60,10,70];
+        let position = 3;
+        for(let i=position; i<data.length-1; i++){
+            data[i]=data[i+1]
+            
+            // console.log(data)
+        }
+        data.length = data.length-1
+        // console.log(data.length);
+        console.log(data)
+
+    </script> -->
+
+
+
+
+
+ <!-- dynamic part -->
+
+   <script>
+    function  removeEl(){
+        var data = [30,40,50,20,90,60,10,70];
+        var position= document.getElementById('position').value
+        position = parseInt(position)
+        for(var i=position; i<=data.length-1; i++){
+            data[i]=data[i+1]
+            
+        }
+        data.length = data.length-1
+        console.log(data)
+    }
+
+// direct way to delete item
+
+    // data.splice(2,1)    // splice take two arguments first is index of element  and second is no of element we want to delete including that given index element it will continously example we have given index to 2 and number of element we wnat ot delete is 5 the it will delet 5 element continously from given element
+    // console.log(data)
+
+   </script>
+<body>
+    <input id="position" type="text" placeholder="enter position">
+    <button onclick="removeEl()">remove element</button>
+    
+</body>
+</html>

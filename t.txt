@@ -1,0 +1,24 @@
+1)  Algorithm is steps to do anything 
+==> here for example the code we write to solve data structure problem is known as Algorithm
+
+
+2) Algorithm Complexity
+==> it means that what way we are choosing or which step we are taking like if i want to go to my friends house u am i taking the shortcut aur going with my bike according to distenace or the weight i am carrying  
+==> this steps is done to make our code cost effective and space efficient 
+
+
+==> It is of two type: 
+        a)Time Complexity ==> It is mainly calculated by counting the number of steps to finish the execution or the number of lines of code used to finish the execution
+                          ==> It directly depends on input example: for sorting we use 2 loops number of elements in a array is input, so for 6 elements loops will run 6*6 =36 (2 loops) if number for input increase then the number of running the loop will also increase hence Time complexity will also increases
+
+        b)space Complexity ==> space complexity is the amount of space required to solve a problem
+                           ==> Auxiliary space + input size
+
+3) Big O notation ==> It is just a sign use to denote complexity(both)
+
+4) Asymptotic analysis and notation
+
+a)Asymptotic analysis ==> it is used to find the best possible Algorithm . it is also used to find the BEST,AVERAGE,WORST algo.
+                      ==> It include Time & Space Complexity and Asymptotic Notation
+
+b)Asymptotic Notation ==>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="element">
+    <button id="button" onclick="getElement()" type="submit">submit</button>
+    <script>let data = [4,5,9,3,7,35,4,3];
+        // document.write(x[Element])
+        
+        function getElement(){
+            let el = document.querySelector('#element').value
+            if(el<data.length && typeof parseInt(el)==="number"){
+                alert(data[el])
+            }
+            else{
+                alert('please enter valid input')
+            }
+        }
+        
+    </script>
+
+
+
+
+
+
+    <script src="./all.js"></script>
+</body>
+</html>

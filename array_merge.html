@@ -1,0 +1,39 @@
+<!-- With for loop -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Two In Array</title>
+
+    <script>
+        let data = [1,2,3,4]
+        let data2=[5,6,7,8,9]
+
+        let data3 = [];
+
+        for(i=0;i<=data.length-1;i++){
+            data3[i]=data[i]
+        }
+        for(i=0;i<=data2.length-1;i++){
+            data3[data.length+i ]=data2[i]
+        }
+        console.log(data3);
+
+        // shortcut to merge array
+        // data3=[...data,...data2]
+        // shortcut to reverse array
+        // console.log(data3.reverse());
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
+
+<!--  10 lines + loop      //  10 + n lines of code to sort + loop
+
+3 variable -->
+
+<!-- it is good for mergingn array if the user only want to merge array and not to sort it, but if i sort array after merging or sort array and then merge, its time complexity and space complexity will increase and making it highly costly and making it ineffective  -->

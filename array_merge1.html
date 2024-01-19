@@ -1,0 +1,46 @@
+<!-- with while loop -->
+<!-- this logic will only work with sorted array it will not work with unsorted array -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge array with while loop</title>
+    <script>
+        let data1=[1,2,3,4,5,6,90,95,96];
+        let data2=[10,2,12,13];
+        data3=[];
+        let d1=0;
+        let d2=0;
+        let d3=0;
+        while (d1<data1.length && d2<data2.length) {
+            if (data1[d1]<data2[d2]) {
+                data3[d3]=data1[d1];
+                d1++;
+            }
+            else{
+                data3[d3]=data2[d2];
+                d2++;
+
+            }
+            d3++;    
+        };
+        while(d1<data1.length) {
+            data3[d3]=data1[d1];
+            d1++;
+            d3++;
+        }
+        console.log(data3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+22 line + loop  // already sorted
+
+6 variable space complexity -->
+
+<!-- it is costly for just just merging array if user only want to array to be merge and not to sort it,but if user want to shorted array to be merge it effective -->
