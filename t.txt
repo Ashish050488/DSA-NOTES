@@ -1,10 +1,12 @@
 1)  Algorithm is steps to do anything 
 ==> here for example the code we write to solve data structure problem is known as Algorithm
+-------------------------------------------------------------------------------------------->
 
 
 2) Algorithm Complexity
 ==> it means that what way we are choosing or which step we are taking like if i want to go to my friends house u am i taking the shortcut aur going with my bike according to distenace or the weight i am carrying  
 ==> this steps is done to make our code cost effective and space efficient 
+-------------------------------------------------------------------------------------------->
 
 
 ==> It is of two type: 
@@ -13,12 +15,22 @@
 
         b)space Complexity ==> space complexity is the amount of space required to solve a problem
                            ==> Auxiliary space + input size
+-------------------------------------------------------------------------------------------->
+
 
 3) Big O notation ==> It is just a sign use to denote complexity(both)
-
+-------------------------------------------------------------------------------------------->
 4) Asymptotic analysis and notation
 
 a)Asymptotic analysis ==> it is used to find the best possible Algorithm . it is also used to find the BEST,AVERAGE,WORST algo.
                       ==> It include Time & Space Complexity and Asymptotic Notation
 
-b)Asymptotic Notation ==>
+b)Asymptotic Notation ==> i)Best Case (Omega Notation (Ω))
+                          ii)Average Case (Theta Notation (Θ))
+                          iii)Worst Case (O Notation(O))
+
+-------------------------------------------------------------------------------------------->
+5)Recursion ==> when a function call itself it is called Recursion. That is if i call a function inside the function it will becom infinite loop; this has to be used carefully because we need to give the condition to break the loop it the condition provided is wrong it will call itself infinitely and break the web borwser and destroy the rem
+
+
+

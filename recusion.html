@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+</head>
+<body>
+    <script>
+        // function Recursion(params) {
+        //     console.log(params)
+        //     if (params<10) {
+        //         Recursion(params +1);
+                
+        //     }
+        // }
+        // let data =0
+        // Recursion(data)
+        
+        function factorial(params) {
+            if(params==0){
+                return 1
+            }
+            else{
+                return params*factorial(params-1)
+            }
+        }
+        
+        let data = 5;
+        console.log(factorial(data))
+
+
+    </script>
+</body>
+</html>
