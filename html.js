@@ -30,7 +30,7 @@
 
 
 /* / ANSWER / */
-     var nums=[1,2,2];    // IF WE PROVIDE A SPECIFIC ARRAY IT WILL NOT SUITABLE FOR ALL ARRAY AS IT HAS FIXED LENGTH JUST REMOVE THE VARIABLE AND IT WILL BECOME ACCEPTABLE FOR ALL
+    //  var nums=[1,2,2];    // IF WE PROVIDE A SPECIFIC ARRAY IT WILL NOT SUITABLE FOR ALL ARRAY AS IT HAS FIXED LENGTH JUST REMOVE THE VARIABLE AND IT WILL BECOME ACCEPTABLE FOR ALL
     //  function concatenateArrays(){
     //      var n = num.length
     //     var ans = new Array(2*n)
@@ -109,21 +109,166 @@
 //     }
 // console.log(ans)
 
-var findErrorNums = function() {
-    var nums= [1,2,4,6,2]
-    var output = []
-    for (let i = 0; i <=nums.length-1; i++) {
-        for (let j = i+1; j < nums.length; j++) {
-            if (nums[i]===nums[j]) {
-                output.push(nums[j],j+1)
+// var findErrorNums = function() {
+//     var nums= [1,2,4,6,2]
+//     var output = []
+//     for (let i = 0; i <=nums.length-1; i++) {
+//         for (let j = i+1; j < nums.length; j++) {
+//             if (nums[i]===nums[j]) {
+//                 output.push(nums[j],j+1)
 
-            }
+//             }
             
-        }
-    }
-    return (output)
-};
-findErrorNums()
+//         }
+//     }
+//     return (output)
+// };
+// findErrorNums()
 
+
+// var nums =[-1,1,2,3,1];
+// var  target = 2;
+// var countPairs = function() {
+//     let output = 0;
     
+//     for(let i=0;i<nums.length-1;i++){
+//         for(let j=i+1;j<nums.length; j++){
+//             if(nums[i]+nums[j]<target){
+//                 output = output+1;
+//             }
+//         }
+//     }
+//     // return output
+//     // console.log(output)
+// };
+// countPairs()
+    
+// var countPairs = function(nums, target) {
+//     let output = 0;
+//     for (let i = 0; i < nums.length - 1; i++) {
+//         for (let j = i + 1; j < nums.length; j++) {
+//             if (nums[i] + nums[j] < target) {
+//                 output++;
+//             }
+//         }
+//     }
+//     return output;
+// };
 
+// var nums =[0,1,4,6,7,10]
+// var diff = 3
+// var arithmeticTriplets = function() {
+//     var output = 0;
+//     for(var i=0; i<nums.length; i++){
+//         for(var j= i+1; j<nums.length; j++){
+//         if(nums[j]=nums[i]==diff && nums[j+1]-nums[j+2]==diff){
+//             output++
+//         }
+//         }
+//     }
+//     console.log(output);
+// };
+// arithmeticTriplets()
+
+
+
+//  REMOVE ELEMENT FOR SORTED ARRAY
+// var arr  = [1, 2, 2, 2, 3];
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = i+1; j < arr.length; j++) {
+//         if(arr[i]===arr[j]){
+//             arr.splice(j,1)
+//             j--
+//         }
+//     };
+    
+// }
+
+// console.log(arr);
+
+
+// MOVE ZEROS TO LAST;
+    // var arr = [1 ,0 ,2 ,3 ,0 ,4 ,0 ,1];
+    // var zeros = []
+    // var newarr = []
+    // for (let i = 0; i < arr.length; i++) {
+    //         if(arr[i]===0){
+    //             zeros.push(arr[i])
+    //             arr.splice(i,1)
+    //             i--
+    //         }
+    // }
+    // newarr = arr.concat(zeros)
+    // console.log(newarr);
+
+// FIND WEATHER THE GIVEN NUMBER IS PRESENT IN AN  ARRAY OR NOT
+// var arr =  [6,7,8,4,1]; 
+// var num = 1;
+// for (let i = 0; i < arr.length; i++) {
+//     if(arr[i]===num){
+//         console.log(i);
+//     }   
+// }
+
+// MERGE TWO SORTED ARRAY WITHOUT DUPLICAY
+// var a = [1, 2, 3, 4, 6,7];
+// var b = [2, 3, 5,8,10,11,12];
+
+// var mergedarr = a.concat(b)
+// mergedarr.sort((a,b)=>a-b)
+
+// for (let i = 0; i < mergedarr.length-1; i++) {
+//     for (let j = i+1; j < mergedarr.length; j++) {
+//         if (mergedarr[i]===mergedarr[j]) {
+//             mergedarr.splice(j,1)
+//             j--;
+//         }
+//     }
+    
+// }
+// console.log(mergedarr);
+
+// JUST ANOTHER WAY OF HANDLING INDICES FOR REMOVING ELEMENT 
+
+// for (let i = 0; i < mergedarr.length - 1; i++) {
+//     for (let j = i + 1; j < mergedarr.length;) {
+//         if (mergedarr[i] === mergedarr[j]) {
+//             mergedarr.splice(j, 1);
+//         } else {
+//             j++; // Increment j only if no element is removed
+//         }
+//     }
+// }
+
+// console.log(mergedarr);
+
+
+
+// LEET 268
+// var nums =[0]
+// function missingNumber() {
+//     const n = nums.length;
+//     const expectedSum = (n * (n + 1)) / 2;
+//     let actualSum = 0;
+//     for (let i = 0; i < n; i++) {
+//         actualSum += nums[i];
+//     }
+//     console.log( expectedSum - actualSum)
+// }
+// missingNumber()
+
+// LEET 283
+
+var arr =[0,1,0,3,12];
+
+
+
+for (let i = 0; i < arr.length-1; i++) {
+    for (let j = i+1; j < arr.length; j++) {
+        if (arr[i]==0) {
+            [arr[i],arr[j]]=[arr[j],arr[i]]
+        }
+        
+    }
+}
+console.log(arr);

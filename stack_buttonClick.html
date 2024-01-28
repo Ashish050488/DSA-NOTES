@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+</head>
+
+<body>
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let max = 5
+
+        // Though we can add element using push method but it will not remain data stucture so we make a function
+        function push() {
+            let val = document.getElementById('newel').value
+            
+            if (currentSize >= max) {
+                alert('stack value is full you cannot add' + + val)
+            }
+            else{
+            data[currentSize] = val;
+            currentSize += 1
+            console.log(document.getElementById('newel').value);
+            document.getElementById('newel').value="";
+            }
+        }
+
+        function pop() {
+            if (currentSize > 0) {
+                currentSize -= 1;
+                data.length = currentSize
+            } else {
+                alert('stack is already empty')
+            }
+        }
+
+        function display(params) {
+            for(let i=0;i<=currentSize-1;i++){
+                console.log('el. no is',i,'and value is',data[i])
+            }
+        }
+    </script>
+
+    <h1>Stack in javascript</h1>
+    <input type="text" placeholder="enter element" id="newel">
+    <button onclick="push()">add all element to element</button>
+    <button onclick="pop()">remove all element from element</button>   <!-- we dont require input box for pop as removes elements from top in stack-->
+    <button onclick="display()">display all element of stack element</button>
+</body>
+
+</html>
