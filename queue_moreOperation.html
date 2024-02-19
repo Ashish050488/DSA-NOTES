@@ -7,10 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Queue with input element in javascript</h1>
+    <input type="text" placeholder="Add element" id="qEl">
+    <button onclick="enqueueWithBtn()">Add element</button>
+    <button onclick="dqueue()">Remove element</button>
+    <button onclick="front()">Show front element</button>
+    <button onclick="rear()">Show rear element</button>
+
+    
     <script>
-        // let queue = [];
-        // let currentSize = queue.length;
-        // let maxsize = 5;
+        let queue = [];
+        let currentSize = queue.length;
+        let maxsize = 5;
 
         // function enqueue(newval){
         //     if (queue.length<maxsize) {
@@ -21,47 +29,47 @@
         //         console.log('queue is laready full');
         //     }
         // }
-        // function dqueue() {
-        //     if (!isEmpty()) {
-        //         for (let i  = 0; i < maxsize; i++) {
-        //         queue[i]=queue[i+1];
-        //     }
-        //     currentSize--
-        //     queue.length =currentSize
-        //     }
-        //     else{
-        //         console.log('queue is already empty');
-        //     }
-        // }
+        function dqueue() {
+            if (!isEmpty()) {
+                for (let i  = 0; i < maxsize; i++) {
+                queue[i]=queue[i+1];
+            }
+            currentSize--
+            queue.length =currentSize
+            }
+            else{
+                console.log('queue is already empty');
+            }
+        }
 
-        // function front() {
-        //     if (!isEmpty()) {
-        //         console.log('FRONT of queue is',queue[0]);
-        //     }
-        //     else{
-        //         console.log('queue is empty no FRONT is availabe');
-        //     }
-        // }
-        // function rear() {
-        //     if (!isEmpty()) {
-        //         console.log('REAR of queue is',queue[currentSize-1]);
-        //     }
-        //     else{
-        //         console.log('queue is empty no REAR is availabe');
-        //     }
-        // }
+        function front() {
+            if (!isEmpty()) {
+                console.log('FRONT of queue is',queue[0]);
+            }
+            else{
+                console.log('queue is empty no FRONT is availabe');
+            }
+        }
+        function rear() {
+            if (!isEmpty()) {
+                console.log('REAR of queue is',queue[currentSize-1]);
+            }
+            else{
+                console.log('queue is empty no REAR is availabe');
+            }
+        }
 
-        // function isEmpty() {
-        //     if(currentSize<=0){
-        //         return true
-        //     }
-        //     else{
-        //         return false
-        //     }
-        // }
-        // function display(){
-        //     console.log(queue)
-        // }
+        function isEmpty() {
+            if(currentSize<=0){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        function display(){
+            console.log(queue)
+        }
 
         // enqueue(30)
         // enqueue(31)
@@ -72,6 +80,18 @@
 
 
         // BELOW ARE CODE TO DISPALY, REAR, FRONT, ENQUEUE,DQUEUE USING INPUT AND BUTTON
+
+        function enqueueWithBtn() {
+            let qEl = document.getElementById('qEl').value
+            if (currentSize<maxsize) {
+                queue[currentSize]= qEl;
+                currentSize++;
+            }
+            else{
+                console.log('queue is laready full');
+            }
+        }
+
 
         
     </script>

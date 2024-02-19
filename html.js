@@ -259,16 +259,72 @@
 
 // LEET 283
 
-var arr =[0,1,0,3,12];
+// var arr =[0,1,0,3,12];
 
 
 
-for (let i = 0; i < arr.length-1; i++) {
-    for (let j = i+1; j < arr.length; j++) {
-        if (arr[i]==0) {
-            [arr[i],arr[j]]=[arr[j],arr[i]]
-        }
+// for (let i = 0; i < arr.length-1; i++) {
+//     for (let j = i+1; j < arr.length; j++) {
+//         if (arr[i]==0) {
+//             [arr[i],arr[j]]=[arr[j],arr[i]]
+//         }
         
+//     }
+// }
+// console.log(arr);
+
+// var x =121;
+// var arr =Array.from(String(x),Number)
+// var newdigit = []
+// for(let i=arr.length-1;i>=0;i--){
+//     newdigit.push(arr[i])
+// }
+// var newdig =Number(newdigit.join(''))
+// if (x===newdig) {
+//     console.log(true);
+// }
+// else{
+//     console.log(false);
+// }
+
+
+
+// pallendrome
+// var x =121;
+// var b = x.toString()
+// for (let i = 0; i <(b.length-1)/2; i++) {
+//     if(b[i]!= b[b.length-1-i]){
+//         console.log(false);
+//     }else{
+//         console.log(true);
+//     }
+    
+// }
+
+
+var romanToInt = function(s) {
+    const mymap = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
     }
-}
-console.log(arr);
+    let result = 0;
+    for(let i=0;i<s.length;i++){
+        var curr = mymap[s[i]];
+        var next = mymap[s[i+1]];
+
+        if(curr<next){
+            result += next - curr;
+            i++
+        }else{
+            result += curr;
+        }
+    }
+    console.log(result);
+};
+
+romanToInt('III')
