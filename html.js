@@ -302,29 +302,194 @@
 // }
 
 
-var romanToInt = function(s) {
-    const mymap = {
-        'I': 1,
-        'V': 5,
-        'X': 10,
-        'L': 50,
-        'C': 100,
-        'D': 500,
-        'M': 1000
-    }
-    let result = 0;
-    for(let i=0;i<s.length;i++){
-        var curr = mymap[s[i]];
-        var next = mymap[s[i+1]];
+// var romanToInt = function(s) {
+//     const mymap = {
+//         'I': 1,
+//         'V': 5,
+//         'X': 10,
+//         'L': 50,
+//         'C': 100,
+//         'D': 500,
+//         'M': 1000
+//     }
+//     let result = 0;
+//     for(let i=0;i<s.length;i++){
+//         var curr = mymap[s[i]];
+//         var next = mymap[s[i+1]];
 
-        if(curr<next){
-            result += next - curr;
-            i++
-        }else{
-            result += curr;
-        }
-    }
-    console.log(result);
-};
+//         if(curr<next){
+//             result += next - curr;
+//             i++
+//         }else{
+//             result += curr;
+//         }
+//     }
+//     console.log(result);
+// };
 
-romanToInt('III')
+// romanToInt('III')
+
+// WRONG AT TEST CASE 154
+// var arr = [2,4,1]
+// var buyday = Math.min(...arr)
+// var buyIndex=arr.indexOf(buyday)
+// var newarr = []
+// var totalprofit;
+// for(let i=buyIndex+1;i<=arr.length-1;i++){
+//     newarr.push(arr[i])
+// };
+// sellday=Math.max(...newarr)
+// if (newarr.length!=0) {
+//     totalprofit=sellday-buyday
+// }
+// else{
+//     totalprofit=0
+// }
+// console.log(totalprofit);
+
+
+// var maxProfit = function(prices) {
+//     if (prices.length < 2) {
+//         return 0; // Edge case: Cannot make a profit with less than 2 prices
+//     }
+
+//     let maxProfit = 0;
+//     let minPrice = prices[0]; // Initialize minimum price to the first day's price
+
+//     for (let i = 1; i < prices.length; i++) {
+//         if (prices[i] < minPrice) {
+//             minPrice = prices[i]; // Update minimum price if a lower price is found
+//         } else {
+//             maxProfit = Math.max(maxProfit, prices[i] - minPrice); // Update max profit if selling at current price yields higher profit
+//         }
+//     }
+
+//     return maxProfit;
+// };
+
+// // Test case: [2, 4, 1]
+// console.log(maxProfit([2, 4, 1])); // Output: 2
+
+
+// var arr = [2,4,1]
+// maxProfit(arr)
+
+
+// REMOVE DUPLICATES
+// var arr = [0,0,1,1,1,2,2,3,3,4,4];
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = i+1; j < arr.length; j++) {
+//         if(arr[i]===arr[j]){
+//             arr.splice(j,1)
+//             j=j-1
+//         }
+//     }
+// }
+// console.log(arr);
+
+// var removeDuplicates = function(nums) {
+//     for (let i = 0; i < nums.length; i++) {
+//     for (let j = i+1; j < nums.length; j++) {
+//         if(nums[i]===nums[j]){
+//             nums.splice(j,1)
+//             j=j-1
+//         }
+//     }
+// }
+// return console.log(nums)
+// };
+
+// var arr = [1,1,2]
+// removeDuplicates(arr)
+
+
+// var removeDuplicates = function(nums) {
+//     let set = new Set(nums)
+//     let arr = Array.from(set)
+    
+//     for (let i  = 0; i < arr.length; i++) {
+//             nums[i]=arr[i]        
+//     }
+//     console.log(length);
+// };
+// var arr = [0,0,1,1,1,2,2,3,3,4]
+// removeDuplicates(arr)
+
+
+// FIND SEARCH INSERT INDEX
+// const nums = [1,3,5,6]
+// const target = 2
+
+
+// for (let i = 0; i < nums.length; i++) {
+//     if (nums.includes(target)) {
+//         return(nums.indexOf(target));
+//     }
+//     else if(nums[i]>target){
+//         return(i);
+//     }
+//     else if(nums[i]!=target && nums.indexOf(nums[i])==nums.length-1){
+//         return(nums.length);
+//     }
+// }
+
+// var s ="   fly me   to   the moon  "
+// s=s.trim()
+// s = s.split(' ')
+// var lastEL = s[s.length-1]
+// var output = 0
+// console.log(lastEL.length);
+// for (let i=0;i<lastEL.length;i++)
+
+// more short
+// const arr = s.trim().split(' ')
+// console.log( arr[arr.length - 1].length);
+
+// var length = 0;
+// var foundword = false;
+// for (let i = s.length-1; i >=0; i--) {
+//     if(s[i]!==' '){
+//         foundword = true
+//         length++;
+//     }
+//     else if(foundword){
+//         break
+//     }
+    
+// }
+// console.log(length);
+
+
+// varlid parenthesis
+
+
+
+// var d = "()[]{}";
+
+// var valid = function(s) {
+//     var stack =[];
+//     for (let i = 0; i <s.length; i++) {
+//         let top =stack[stack.length-1]
+//         if(s[i]=='(' || s[i]=='{'||s[i]=='['){
+//             stack.push(s[i])
+//         }
+//         else if(s[i]=='('&& top==')' ||s[i]=='{'&& top=='}'||s[i]=='['&& top==']'){
+//             stack.pop()
+//         }else{
+//             return console.log(false);
+//         }
+//     }
+//     if (stack ==0) {
+//         return console.log(true);
+//     }
+//     if (stack !=0) {
+//         return false
+//     }
+// }
+
+
+
+// valid(d)
+
+
+

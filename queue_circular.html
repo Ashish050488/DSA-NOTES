@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class CircularQueue{
+        //     constructor(size){
+        //         this.max = size;
+        //         this.item = new Array(size);
+        //         this.currentSize = 0;
+        //         this.rear =-1;
+        //         this.front=-1;
+        //     }
+        //     enqueue(val){
+        //         if(this.currentSize!=this.max){
+        //             if (this.rear==this.max-1) {
+        //                 this.rear=0
+        //             }else{
+        //                 this.rear++
+        //             }
+        //             this.item[this.rear]=val;
+        //             this.currentSize++;
+        //             if((this.front==-1)){
+        //                 this.front=this.rear
+        //             }
+        //         }
+                   
+        //     }
+
+        //     dqueue(){
+        //         if (this.currentSize!=0) {
+        //             this.item[this.front]=null;
+        //             if(this.front    =this.max-1){
+        //                 this.front=0;
+        //             }
+        //             else{
+        //                 this.front++
+        //             }
+        //             this.currentSize--;
+        //         }else{
+        //             this.front=-1
+        //             this.rear=-1
+        //             alert('queue is already empty')
+        //         }
+        //     }
+
+
+        // }
+
+
+
+
+
+        // let queue = new CircularQueue(5)
+
+
+
+
+var nums =[3,2,2,3];
+var val = 3;
+for(let i=0;i<nums.length;i++){
+    if(nums[i]==val){
+        nums.splice(i,1)
+        i= i-1
+    }
+}
+console.log(nums.length,nums);
+    </script>
+</body>
+</html>
